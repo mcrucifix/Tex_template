@@ -27,13 +27,8 @@
 }
 }
 
-\newcommand{\printversion}{
-This presentation was generated from:
-\begin{itemize}
-    \item \texttt{$url$}
-    \item Commit: \texttt{$commit$}
-\end{itemize}
-}
+\newcommand{\printurl}{\url{$url$}}
+\newcommand{\printcommit}{\texttt{$commit$}}
 
 \newcommand{\fullimageb}[2][]{
 { % all template changes are local to this group.
@@ -323,8 +318,8 @@ $endif$
   \ifnum \theframenumber=1 \else
         % This is the title frame, do nothing
   %\parbox{\linewidth}{\vspace*{-15pt}\hfill\insertdate \quad \raisebox{0pt}{\begin{tikzpicture}\uclouvainlogo{0}{0}{0.25pt}\end{tikzpicture}} 
-  \parbox{\linewidth}{\vspace*{-15pt}\hfill\insertdate \quad 
-\insertframenumber/\inserttotalframenumber\vskip15pt} \fi}
+  \parbox{\linewidth}{\vspace*{15pt}\hfill\insertdate \quad 
+\printurl \ \printcommit \ \textcolor{uclbleunuit}{\insertframenumber/\inserttotalframenumber\vskip5pt}} \fi}
 
 
 
